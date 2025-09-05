@@ -2711,6 +2711,7 @@ html, body {
 /* Search bar input text in light theme */
 .navbar .search-bar input {
   color: black !important;
+  background: white !important;
 }
 
 .navbar .search-bar input::placeholder {
@@ -3174,6 +3175,71 @@ html, body {
   padding-top: 0;
 }
 
+/* Light theme text colors - ensure all text is black except navbar */
+body:not(.dark-theme) {
+  color: #000000;
+}
+
+body:not(.dark-theme) input,
+body:not(.dark-theme) textarea,
+body:not(.dark-theme) select,
+body:not(.dark-theme) option {
+  color: #000000 !important;
+}
+
+body:not(.dark-theme) input::placeholder,
+body:not(.dark-theme) textarea::placeholder {
+  color: #666666 !important;
+}
+
+/* Create post form styling in light mode */
+body:not(.dark-theme) .post-form input,
+body:not(.dark-theme) .post-form textarea,
+body:not(.dark-theme) .post-form select {
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+body:not(.dark-theme) .post-form input::placeholder,
+body:not(.dark-theme) .post-form textarea::placeholder {
+  color: #666666 !important;
+}
+
+body:not(.dark-theme) .form-group label,
+body:not(.dark-theme) .form-group input,
+body:not(.dark-theme) .form-group textarea,
+body:not(.dark-theme) .form-group select {
+  color: #000000 !important;
+}
+
+body:not(.dark-theme) h1,
+body:not(.dark-theme) h2,
+body:not(.dark-theme) h3,
+body:not(.dark-theme) h4,
+body:not(.dark-theme) h5,
+body:not(.dark-theme) h6,
+body:not(.dark-theme) p,
+body:not(.dark-theme) span,
+body:not(.dark-theme) div,
+body:not(.dark-theme) label {
+  color: #000000;
+}
+
+/* Exclude navbar from light theme text color rules */
+body:not(.dark-theme) .navbar,
+body:not(.dark-theme) .navbar * {
+  color: white !important;
+}
+
+/* Override for search bar input in navbar */
+body:not(.dark-theme) .navbar .search-bar input {
+  color: black !important;
+}
+
+body:not(.dark-theme) .navbar .search-bar input::placeholder {
+  color: #666 !important;
+}
+
 /* Comments Section */
 .comments-section {
   margin-top: 3rem;
@@ -3207,6 +3273,8 @@ body {
   resize: vertical;
   font-family: inherit;
   margin-bottom: 1rem;
+  background: #f5f5f5;
+  color: #000000;
 }
 
 .comment-form button {

@@ -15,7 +15,8 @@ const Signup = () => {
       await loginWithGoogle();
       navigate('/home');
     } catch (error) {
-      setError('Failed to sign up with Google');
+      console.error('Google signup error:', error);
+      setError(`Failed to sign up with Google: ${error.message}`);
     }
     setLoading(false);
   };
